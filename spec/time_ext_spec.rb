@@ -13,7 +13,7 @@ describe Time do
   describe "parse_swbem_date_time" do
     it "should parse a swbemdatetime string" do
       wbem = Time.parse_swbem_date_time("20100201102200.000000#{offset}")
-      wbem.to_s.should eql("2010-02-01 10:22:00 -0800")
+      wbem.should eql(Time.local(2010,2,1,10,22))
     end
   end
 end
